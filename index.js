@@ -52,13 +52,16 @@ const showAsteroids = (asteroids) => {
   asteroids_container.innerHTML = "";
   asteroids_container.innerHTML = `
   
-  <div class="col-span-full">
+  <div class="col-span-full flex flex-col items-center justify-center">
   
   <h4 class="text-yellow-200 text-2xl">
   
   ${asteroids.length} asteroids found
   
   </h4>
+  <h6 class="text-white">Between ${formatDateClient(
+    date_start.value
+  )} and ${formatDateClient(date_end.value)}</h6>
   </div>
   `;
   asteroids.map(
@@ -123,6 +126,10 @@ const showAsteroids = (asteroids) => {
 const formatDate = (date) => {
   let date_ = new Date(date);
   return moment(date_).format("YYYY-MM-DD");
+};
+const formatDateClient = (date) => {
+  let date_ = new Date(date);
+  return moment(date_).format("LL");
 };
 
 const getDistance = (date_start, date_end) => {

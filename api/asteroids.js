@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 
 const API_KEY = "XEBPgDPAePP97QjDkGIgDWRZIcKf1rBjnDKVihXj";
 
@@ -30,11 +30,13 @@ export const getAsteroids = async (start_date, end_date) => {
           id,
           name,
           absolute_magnitude_h,
-          estimated_diameter: diameter,
+          estimated_diameter: diameter.toFixed(2),
           is_potentially_hazardous_asteroid,
           close_approach_date,
-          relative_velocity: relative_velocity.kilometers_per_second,
-          miss_distance: miss_distance.kilometers,
+          relative_velocity: parseFloat(
+            relative_velocity.kilometers_per_second
+          ).toFixed(3),
+          miss_distance: parseFloat(miss_distance.kilometers).toFixed(2),
           is_sentry_object,
         };
 

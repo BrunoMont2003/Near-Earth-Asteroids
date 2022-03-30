@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nasa</title>
+    <link
+      rel="shortcut icon"
+      href="https://api.nasa.gov/assets/img/favicons/favicon-192.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/globals.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-900">
+    <div class="bg-slate-900 w-full min-h-screen p-5 lg:container lg:m-auto">
+      <div class="flex justify-between items-center">
+        <h1 class="text-white text-3xl font-bold">Near Earth Asteroids</h1>
+        <img
+          src="https://api.nasa.gov/assets/img/favicons/favicon-192.png"
+          alt="nasa"
+          class="w-24"
+        />
+      </div>
+      <div class="p-5"></div>
+      <div class="p-5"></div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-20 gap-x-10"
+        id="galeria"
+      >
+        <div class="p-5 rounded text-white border-2 w-80 border-yellow-200">
+          <h4 class="text-center font-bold text-lg text-purple-300">
+            (2022 BP4)
+          </h4>
+          <h6 class="text-center text-xs my-2 text-amber-400">#54240511</h6>
+          <ul class="">
+            <li>
+              <span class="text-lime-400"> Absolute Magnitude (h): </span>
+              <span class="text-rose-400"> 27.1 </span>
+            </li>
+            <li>
+              <span class="text-lime-400"> Estimated Diameter (km): </span>
+              <span class="text-rose-400"> 0.6 </span>
+            </li>
+            <li>
+              <span class="text-red-500 block"> Is a hazardous asteroid </span>
+            </li>
+            <li>
+              <span class="text-neutral-300 block"> Is a sentry object </span>
+            </li>
+            <li>
+              <span class="text-lime-400"> Close Approach Date: </span>
+              <span class="text-rose-400"> 2021-09-07 </span>
+            </li>
+            <li>
+              <span class="text-lime-400"> Relative Velocity (kps): </span>
+              <span class="text-rose-400"> 8.3 </span>
+            </li>
+            <li>
+              <span class="text-lime-400"> Relative Velocity (kps): </span>
+              <span class="text-rose-400"> 8.3 </span>
+            </li>
+            <li>
+              <span class="text-lime-400"> Miss Distance (km): </span>
+              <span class="text-rose-400"> 456505265.5 </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

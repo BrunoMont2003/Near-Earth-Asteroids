@@ -158,9 +158,9 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
+asteroids_container.innerHTML = "<span class='text-white'>Cargando ...</span>";
 const asteroids = await getAsteroids(
   formatDate(date_start.value),
   formatDate(date_end.value)
 );
-asteroids_container.innerHTML = "<span class='text-white'>Cargando ...</span>";
 showAsteroids(asteroids);
